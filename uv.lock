@@ -42,7 +42,7 @@ name = "cffi"
 version = "2.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "pycparser", marker = "implementation_name != 'PyPy'" },
+    { name = "pycparser" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/eb/56/b1ba7935a17738ae8453301356628e8147c79dbb825bcbc73dc7401f9846/cffi-2.0.0.tar.gz", hash = "sha256:44d1b5909021139fe36001ae048dbdde8214afa20200eda0f64c068cac5d5529", size = 523588, upload-time = "2025-09-08T23:24:04.541Z" }
 wheels = [
@@ -195,6 +195,7 @@ name = "ds-eda-project-template"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "geopy" },
     { name = "missingno" },
     { name = "plotly" },
     { name = "psycopg2-binary" },
@@ -211,6 +212,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "geopy", specifier = ">=2.5.0" },
     { name = "missingno", specifier = ">=0.5.2" },
     { name = "plotly", specifier = ">=6.8.0" },
     { name = "psycopg2-binary", specifier = ">=2.9.12" },
@@ -274,6 +276,27 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/34/3b/214dcc19ee31d3d38fb5ad2755c11ef0514e5dc300bbaf41c0b69f393799/fonttools-4.63.0-cp314-cp314t-win32.whl", hash = "sha256:948428a275741f0b64b113c955425a953314f4b9ab9997f73a72c83e68e569c8", size = 2359326, upload-time = "2026-05-14T12:04:24.22Z" },
     { url = "https://files.pythonhosted.org/packages/dd/1e/3ff1a9b523058c2eeb6a9d50f5574e2a738200d0d94107d5bc4105e8da3f/fonttools-4.63.0-cp314-cp314t-win_amd64.whl", hash = "sha256:6d4741eb179121cab9eea4cb2393d24492373a260d7945006358c08cfbf45419", size = 2425829, upload-time = "2026-05-14T12:04:26.829Z" },
     { url = "https://files.pythonhosted.org/packages/2c/47/c99d5268f354002ce80f8d029cd9d7d872969da1de8b93d32de4dc56d6f4/fonttools-4.63.0-py3-none-any.whl", hash = "sha256:445af2eab030a16b9171ea8bdda7ebf7d96bda2df88ee182a464252f6e05e20d", size = 1164562, upload-time = "2026-05-14T12:04:29.092Z" },
+]
+
+[[package]]
+name = "geographiclib"
+version = "2.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/df/78/4892343230a9d29faa1364564e525307a37e54ad776ea62c12129dbba704/geographiclib-2.1.tar.gz", hash = "sha256:6a6545e6262d0ed3522e13c515713718797e37ed8c672c31ad7b249f372ef108", size = 37004, upload-time = "2025-08-21T21:34:26Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/31/b3/802576f2ea5dcb48501bb162e4c7b7b3ca5654a42b2c968ef98a797a4c79/geographiclib-2.1-py3-none-any.whl", hash = "sha256:e2a873b9b9e7fc38721ad73d5f4e6c9ed140d428a339970f505c07056997d40b", size = 40740, upload-time = "2025-08-21T21:34:24.955Z" },
+]
+
+[[package]]
+name = "geopy"
+version = "2.5.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "geographiclib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/da/0c/b4e42a0495293f6c94364baba4c657c68bc8d8efec784259cc943f4ba28b/geopy-2.5.0.tar.gz", hash = "sha256:7b6c849f18108dcce4faa3d614e2801107b465f7b05fd3c1db9db12e225ae950", size = 122254, upload-time = "2026-07-12T19:50:06.051Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/66/e5/de8b557b279e31cdfb2070ac83eb45dc7e29bd93cd544128756f658e52c7/geopy-2.5.0-py3-none-any.whl", hash = "sha256:8ad8cc226b505ca4d272ae9a2eeba08b8a2c565fc9a04eaefc33ad49c32b51aa", size = 114619, upload-time = "2026-07-12T19:50:04.839Z" },
 ]
 
 [[package]]
@@ -741,7 +764,7 @@ name = "pexpect"
 version = "4.9.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "ptyprocess", marker = "sys_platform != 'emscripten' and sys_platform != 'win32'" },
+    { name = "ptyprocess" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/42/92/cc564bf6381ff43ce1f4d06852fc19a2f11d180f23dc32d9588bee2f149d/pexpect-4.9.0.tar.gz", hash = "sha256:ee7d41123f3c9911050ea2c2dac107568dc43b2d3b0c7557a33212c398ead30f", size = 166450, upload-time = "2023-11-25T09:07:26.339Z" }
 wheels = [
